@@ -1,0 +1,21 @@
+        -:    0:Source:/home/kainaat/malware_analysis/masterlabkainaatsingh/input/input_program.c
+        -:    0:Graph:/home/kainaat/malware_analysis/masterlabkainaatsingh/input/input_program.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:
+        -:    4:#define N 16 /* buffer size */
+        -:    5:
+    #####:    6:int main(void) {
+        -:    7:  char name[N]; /* buffer */
+        -:    8:  
+        -:    9:  /* prompt user for name */
+    #####:   10:  printf("What's your name? ");
+    #####:   11:  scanf("%s", name);
+        -:   12:  
+    #####:   13:  printf("Hi there, %s!\n", name); /* greet the user */
+        -:   14:  
+    #####:   15:  return EXIT_SUCCESS;
+        -:   16:}
