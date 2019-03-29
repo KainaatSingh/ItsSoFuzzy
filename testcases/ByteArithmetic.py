@@ -22,9 +22,8 @@ class ByteArithmetic():
 
     def byte_arithmetic(length, option, string):
 
-        #print('byte')
         obj = ByteArithmetic()
-        #obj_seed = GenerateSeed()
+        
         if option == 'none':
             
             r = randint(0,35)
@@ -96,7 +95,6 @@ class ByteArithmetic():
 
     def byte_swap(length, option, string):
 
-        #print('swap')
         obj = ByteArithmetic()
 
         if option == 'none':
@@ -127,6 +125,7 @@ class ByteArithmetic():
 
     
     def add_character(string):
+        
         random_character = chr(randrange(0,128))
         mutated_string = ""
         temp_list = []
