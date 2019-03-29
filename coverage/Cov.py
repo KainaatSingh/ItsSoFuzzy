@@ -20,12 +20,15 @@ def compile_program(input_file, out_file):
         exit(0)
 
 
-def generate_gcov(input_file):
+def generate_gcov(input_file, coverage):
 
     #print(os.getcwd())
     os.chdir('input/')
-    output = subprocess.run(['gcov ' + input_file], shell = True, stdout = subprocess.PIPE, stderr = subprocess.PIPE, encoding ='utf-8')
-
+    if coverage == 'path':
+        output = subprocess.run(['gcov ' + input_file], shell = True, stdout = subprocess.PIPE, stderr = subprocess.PIPE, encoding ='utf-8')
+    elif coverage == 'block':
+        output = subprocess.run(['gcov ' + ' -a ' + input_file], shell = True, stdout = subprocess.PIPE, stderr = subprocess.PIPE, encoding ='utf-8')
+    
     if output.returncode == 0:
         os.chdir('../')
         return
