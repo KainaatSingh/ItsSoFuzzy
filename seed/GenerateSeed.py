@@ -36,21 +36,18 @@ def exhaustive_seed(length):
         return strings
 
     
-def create_seed():
-        
-        #print('create_seeds')
+def create_seed(length):
         
         seeds = set()
         
         for i in range(0,10):
-            length = randrange(1,70)
             seeds.add(random_printable_seed(length))
 
         return seeds
 
     
 def pick_seed(seeds):
-        #print('picking')
+        
         return choice(tuple(seeds))
 
     
