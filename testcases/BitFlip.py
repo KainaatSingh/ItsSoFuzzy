@@ -22,7 +22,7 @@ class BitFlip():
     
     
     def flip_one(length, option, string):
-        #print('one flip')
+        
         obj = BitFlip()
         
         if option == 'none':
@@ -41,7 +41,6 @@ class BitFlip():
             return mutated_inputstring
 
         else:    
-            #print('flip_one')
             seed_func = obj.select_seed(option)
             input_string = ""
             input_string = seed_func(length)
@@ -67,6 +66,7 @@ class BitFlip():
 
     
     def flip_one_restore(length, option, string):
+        
         obj = BitFlip()
 
         seed_func = obj.select_seed(option)
@@ -97,9 +97,9 @@ class BitFlip():
 
     
     def flip_all(length, option, string):
-        #print('flip all')
+        
         obj = BitFlip()
-
+        
         if option == 'none':
             mutated_inputstring = ""
             input_list = []
@@ -146,7 +146,7 @@ class BitFlip():
 
 
     def flip_two(length, option, string):
-        #print('flip two')
+        
         obj = BitFlip()
 
         if option == 'none':
@@ -203,6 +203,7 @@ class BitFlip():
 
     
     def flip_two_restore(length, option, string):
+        
         obj = BitFlip()
 
         seed_func = obj.select_seed(option)
