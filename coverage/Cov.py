@@ -10,7 +10,7 @@ path.append('../input')
 def compile_program(input_file, out_file):
     
     os.chdir('input/')
-    output = subprocess.run(['gcc ' + ' --coverage ' + ' -ftest-coverage ' + ' -fprofile-arcs ' + input_file + ' -o ' + out_file], shell = True, stdout = subprocess.PIPE, stderr = subprocess.PIPE, encoding ='utf-8')
+    output = subprocess.run(['gcc ' + '-fsanitize=address ' + ' --coverage ' + ' -ftest-coverage ' + ' -fprofile-arcs ' + input_file + ' -o ' + out_file], shell = True, stdout = subprocess.PIPE, stderr = subprocess.PIPE, encoding ='utf-8')
 
     if output.returncode == 0:
         os.chdir('../')
