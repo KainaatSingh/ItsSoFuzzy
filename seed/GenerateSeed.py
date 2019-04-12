@@ -56,3 +56,9 @@ def add_seed(seeds, string):
         seeds.add(string)
 
         return seeds
+
+def remove_seed(seeds, string):
+
+        seeds.remove(string)
+
+        return seeds
