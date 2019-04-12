@@ -1,5 +1,19 @@
 import re
 
+aggregate_block_coverage = [] 
+total_coverage = set()
+
+def get_aggregate_block_coverage(coverage):
+
+    global aggregate_block_coverage
+    global total_coverage
+    print(total_coverage)
+    total_coverage |= coverage
+    aggregate_block_coverage.append(len(total_coverage))
+    
+    return
+
+
 def get_block_coverage(input_file):
     filename = input_file + ".gcov"
     coverage = set()
@@ -18,5 +32,7 @@ def get_block_coverage(input_file):
                 
                 block_covered += 1
                 coverage.add(block_covered)
+    
+    get_aggregate_block_coverage(coverage)
     
     return coverage
