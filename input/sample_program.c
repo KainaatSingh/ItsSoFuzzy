@@ -1,16 +1,29 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
-#define N 16 /* buffer size */
+int main(void)
+{
+    char buff[15];
+    int pass = 0;
 
-int main(void) {
-  char name[N]; /* buffer */
-  
-  /* prompt user for name */
-  printf("What's your name? ");
-  scanf("%s", name);
-  
-  printf("Hi there, %s!\n", name); /* greet the user */
-  
-  return EXIT_SUCCESS;
+    printf("\n Enter the password : \n");
+    gets(buff);
+
+    if(strcmp(buff, "thegeekstuff"))
+    {
+        printf ("\n Wrong Password \n");
+    }
+    else
+    {
+        printf ("\n Correct Password \n");
+        pass = 1;
+    }
+
+    if(pass)
+    {
+       /* Now Give root or admin rights to user*/
+        printf ("\n Root privileges given to the user \n");
+    }
+
+    return 0;
 }

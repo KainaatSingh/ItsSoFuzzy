@@ -9,7 +9,7 @@
         -:    4:#define N 16 /* buffer size */
         -:    5:
     #####:    6:int main(void) {
-        -:    7:  char name[N]; /* buffer */
+    #####:    7:  char name[N]; /* buffer */
         -:    8:  
         -:    9:  /* prompt user for name */
     #####:   10:  printf("What's your name? ");

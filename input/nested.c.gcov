@@ -6,30 +6,42 @@
         -:    1:#include <stdio.h>
         -:    2: 
         1:    3:int main()
+        1:    3-block  0
         -:    4:{
-        -:    5:  char text[100];
+        1:    5:  char text[100];
+        1:    5-block  0
         1:    6:  int begin, middle, end, length = 0;
         -:    7: 
         1:    8:  printf("Enter a string:\n");
         1:    9:  gets(text);
         -:   10: 
-       76:   11:  while (text[length] != '\0')
-       74:   12:    length++;
+        6:   11:  while (text[length] != '\0')
+        6:   11-block  0
+        5:   12:    length++;
+        5:   12-block  0
         -:   13: 
         1:   14:  end = length - 1;
         1:   15:  middle = length/2;
         -:   16: 
         1:   17:  for (begin = 0; begin < middle; begin++)
+        1:   17-block  0
+    $$$$$:   17-block  1
+        1:   17-block  2
         -:   18:  {
         1:   19:    if (text[begin] != text[end])
+        1:   19-block  0
         -:   20:    {
         1:   21:      printf("Not a palindrome.\n");
+        1:   21-block  0
         1:   22:      break;
         -:   23:    }
     #####:   24:    end--;
         -:   25:  }
         1:   26:  if (begin == middle)
+        1:   26-block  0
     #####:   27:    printf("Palindrome.\n");
+    $$$$$:   27-block  0
         -:   28: 
         1:   29:  return 0;
+        1:   29-block  0
         -:   30:}
