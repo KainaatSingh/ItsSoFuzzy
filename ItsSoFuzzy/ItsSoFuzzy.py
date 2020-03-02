@@ -149,7 +149,7 @@ def check_coverage(name):
 
 
 def write_result(crashes, runs, total_inputs, filename1, filename2, mutation, coverage):
-        os.chdir('../output/') 
+        os.chdir('output/') 
         
         with open(filename1, "a") as fo:
             fo.truncate(0)
